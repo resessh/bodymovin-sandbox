@@ -5,6 +5,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "moduleResolution": "node",
+    "lib": ["es2016", "dom"],
     "removeComments": false,
     "preserveConstEnums": true,
     "noImplicitAny": false,
@@ -19,5 +20,10 @@
     "sourceMap": true
   },
   "license": "MIT",
-  "lib": "ES2016"
+  "include": [
+    "src/ts/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -4,6 +4,7 @@ import * as webpack from 'webpack';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as BrowserSyncPlugin from 'browser-sync-webpack-plugin';
+import * as CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const config: webpack.Configuration = {
   context: path.join(__dirname, '/src'),
@@ -87,6 +88,9 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       template: 'index.pug'
     }),
+    new CopyWebpackPlugin([
+      { from: 'motion', to: 'motion' },
+    ]),
   ],
 
 };
